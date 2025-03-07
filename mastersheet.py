@@ -2,12 +2,7 @@ import requests
 from supabase import create_client, Client
 
 # API Key and Database ID
-NOTION_API_KEY = "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"
-NOTION_DATABASE_ID = "246410551efb4b10a7b8450f51fe278c"
 
-#Supabase connection key 
-SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6bW15ZHd6ZHh1aHdvcnZuanloIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MTI5MDgzNSwiZXhwIjoyMDU2ODY2ODM1fQ.p6bqB3No6vJ8d7tL5NI2eIy3Is1NujOxifo5tPRtkdg"
-SUPABASE_URL = "https://xzmmydwzdxuhworvnjyh.supabase.co"
 
 supabase: Client = create_client(SUPABASE_URL, SERVICE_ROLE_KEY)
 
