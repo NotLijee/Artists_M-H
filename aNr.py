@@ -3,49 +3,46 @@ import sys
 import re
 
 #Notion Keys 
-NOTION_API_KEY = "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"
-NOTION_DATABASE_ID = "246410551efb4b10a7b8450f51fe278c"
-NOTION_URL = "https://api.notion.com/v1/pages"
+
 
 import re
 
 # Sample email text
 email_text = """
-“Thea Dora”
+“marQ”
 
-Monthly Spotify Listeners: 47.5K
+Monthly Spotify Listeners: 387K
 
-Instagram Followers: 1.3K
+Instagram Followers: 7.7K
 
-TikTok Followers: 125
+TikTok Followers: 3.9K
 
-Name: Thea Borregard
+Name: Hayden J. Marquardt
 
-Location: Copenhagen, DK
+Location: New York City, NY
 
-Age: 26
+Age: N/A
 
-Genre: Dance, Electronic
+Genre: R&B
 
-Career Overview: Born and raised in Norrebro, Copenhagen, Thea Dora first came onto the scene with her debut single “Collected” in the beginning of last year. Working with songwriter and producer Ronni Vindahl, who has worked and produced songs for Kendrick Lamar, Avicci, and MO; and worked with mixing engineer Geoff Swann who has mixed for Chappell Roan, Billie Eilish, and Charli XCX. Since her debut single she has released her debut EP “Enter” followed by two more singles, with the latest being “New Beginnings” that she has released just this year. She is set to perform at the Spot Festival in Denmark on May 2-3.
+Career Overview: Hayden Marquardt, known as marQ, started releasing music just over the last year, starting in 2023. Originally from Chicago, Illinois, marQ finds much inspiration from artists such as Steve Lacy and Dominic Fike. His first single “Whats Wrong?” was released in 2023, and since then he has released single after single until the release of his debut EP “Hayden’s Demos” He’s since continued to release hit after hit, with each of these singles since then surpassing over 1 million streams. His last EP “Rhodie” was released back in November of 2024, and he has just released his single “Yesterday” this month. He has consistently worked with producer Adam Bross.
 
-Standout Songs: Collected, New Beginnings
+Standout Songs: On & Off ; Farewell
 
-Editorial Playlists: All New Pop, Fresh Finds, Fresh Finds Pop, New Pop Revolution, Ny Pop 
+Editorial Playlist: Fresh Finds ; Fresh Finds Indie
 
-Assessment: Last month Thea Dora saw a +46.62K increase in New Monthly Spotify Listeners. Along with a significant and impressive +9104.26% spike in just the last year alone. Considering Thea Dora has only just started putting out music in just the last year, and is working with some of the most well known names in the industry, I believe that with upcoming performances/festivals and promotion of her newest singles she will continue to rise and emerge as a new artist.
+Assessment: Over the last month, marQ has seen a +29.26K increase in New Monthly Spotify Listeners. Along with his massive growth in Spotify Listeners, he has also amassed over 228K playlist counts in just the last month alone. With a growing following on both TikTok and Instagram, and multiple songs with over 1 million streams, marQ is surely securing his spot as an up and coming artist. 
 
 % Growth:
+1 MONTH: +29.26K +8.16%
 
-1 MONTH: +46.62K +4810.84%
+3 MONTHS: +157.41K +68.77%
 
-3 MONTHS: +47.07K +9104.26%
-
-1 YEAR: +47.07K +9104.26%
+1 YEAR: +160.12K +70.79%
 
 Contacts:
 
-Manager: Unsigned
+Management: Unsigned
 
 Label: Unsigned
 
@@ -54,6 +51,8 @@ Relevant Links:
 Website
 
 Credits
+
+Rhodie (Official Video)
 """
 def multi_select_value(value):
     # If value is already a list, return a list of dicts; otherwise, wrap it in a list.
