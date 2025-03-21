@@ -111,11 +111,11 @@ def extract_data(email_text):
     """Extract relevant information from email text"""
     try:
         # Extract artist name
-        artist_match = re.search(r'“([^”]+)”', email_text)
-        artist_name = artist_match.group(1) if artist_match else "Not found"
+        lines = email_text.split("\n")
+        artist_name = next((line.strip() for line in lines if line.strip()), "Not found")
 
         # Extract Monthly Spotify Listeners
-        spotify_match = re.search(r'Monthly Spotify Listeners:\s*([\d.,K]+)', email_text)
+        spotify_match = re.search(r'Monthly Spotify Listeners:\s*([\d.,]+[KM]?)', email_text)        
         monthly_listeners = spotify_match.group(1) if spotify_match else "Unknown"
 
         # Extract Label
@@ -141,6 +141,7 @@ def extract_data(email_text):
     except Exception as e:
         print(f"❌ Error extracting data from email text: {e}")
         return "Not found", "Unknown", "Unknown", []
+    
 
 def submit_to_notion(email_text):
     """Submit extracted data to Notion"""
